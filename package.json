@@ -1,0 +1,53 @@
+{
+  "name": "@sashite/cell",
+  "version": "1.0.0",
+  "description": "CELL (Coordinate Encoding for Layered Locations) implementation for JavaScript/TypeScript",
+  "keywords": [
+    "cell",
+    "coordinate",
+    "encoding",
+    "chess",
+    "shogi",
+    "xiangqi",
+    "board-game",
+    "game-protocol"
+  ],
+  "author": "Cyril Kato",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/sashite/cell.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashite/cell.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sashite/cell.js/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
